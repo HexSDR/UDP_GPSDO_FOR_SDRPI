@@ -10,9 +10,6 @@ set_property  -dict {PACKAGE_PIN  K16    IOSTANDARD LVCMOS25} [get_ports  dac_di
 set_property  -dict {PACKAGE_PIN  J16   IOSTANDARD LVCMOS25} [get_ports  dac_clk   ] ;
 set_property  -dict {PACKAGE_PIN  k18   IOSTANDARD LVCMOS25} [get_ports  gps_pl_led    ] ; 
 set_property  -dict {PACKAGE_PIN  e19   IOSTANDARD LVCMOS25} [get_ports  sel_clk_src    ] ; 
-
-#set_property  -dict {PACKAGE_PIN  b20   IOSTANDARD LVCMOS25} [get_ports  tx1_amp_en     ] ; 
-#set_property  -dict {PACKAGE_PIN  c20   IOSTANDARD LVCMOS25} [get_ports  tx2_amp_en     ] ; 
  
   
 

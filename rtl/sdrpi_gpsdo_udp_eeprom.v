@@ -1,5 +1,7 @@
  
 
+// liwei 715713994@qq.com  
+
 module sdrpi_gpsdo_udp_eeprom  #(parameter product_mode=1)(
 
 input clk_125m, rst,// clk_40m,
@@ -108,27 +110,7 @@ rcv_socket rcv_socket_B  (
 .fifo_wr( b_rcv_valid ) ,.fifo_dout( b_rcv_dout ) ,.src_port(b_rcv_udp_src_port ) ,.src_ip(b_rcv_udp_src_ip) 
 );
 
-/*
-    XIL_ILA_64x16 XIL_ILA_64x16_i(
-        .clk_0( clk_125m_eth ) ,
-        .probe0_0(  a_rcv_valid ) ,
-        .probe1_0(  a_rcv_dout  ) ,
-        .probe2_0( b_rcv_valid ) ,
-        .probe3_0( b_rcv_dout  ) ,
-        .probe4_0(  ) ,
-        .probe5_0(  ) ,
-        .probe6_0(  ) ,
-        .probe7_0(  ) ,
-        .probe8_0(  ) ,
-        .probe9_0(  ) ,
-        .probe10_0(  ) ,
-        .probe11_0(  ) ,
-        .probe12_0(  ) ,
-        .probe13_0(  ) ,
-        .probe14_0(  ) ,
-        .probe15_0(  ) 
-		);
- */
+ 
 
 ////////////////////////////////////////
 //  send  interface 
@@ -198,27 +180,7 @@ trans_socket   #(
 	);
  
  
- /*
  
-ila_64x16 ila_trans_socket (
-.clk( clk_125m_eth ),
-.in0(  rst   ),
-.in1(    b_snd_fifo_din  ),
-.in2( b_snd_wr_fifo    ),
-.in3(   b_snd_full   ),
-.in4( b_udp_tx_allowed    ),
-.in5( b_snd_udp_pack_valid     ),
-.in6( b_snd_udp_tx_len    ),
-.in7( b_snd_udp_tx_dat     ) ,
-.in8( b_snd_udp_tx_start    ) ,
-.in9(  trans_socket_B_st   ) ,
-.in10(      ) ,
-.in11(        )  ,
-.in12(     ) ,
-.in13(     ),
-.in14(    )  
-);
-*/
 
 always @ (posedge clk_125m_eth)  a_udp_tx_allowed <=(st == 20)&&(a_snd_udp_pack_valid==1)&&(udp_tx_busy==0) ;
 always @ (posedge clk_125m_eth)  b_udp_tx_allowed <=(st == 40)&&(b_snd_udp_pack_valid==1)&&(udp_tx_busy==0) ;
@@ -261,29 +223,7 @@ begin
 end 
 endcase 
  
- 
- /*
- 
- ila_64x16 ila_trans_socket (
-.clk( clk_125m_eth ),
-.in0(  snd_udp_dst_ip   ),
-.in1(    snd_udp_dst_port  ),
-.in2( snd_udp_src_port    ),
-.in3(  snd_udp_tx_len     ),
-.in4(  snd_udp_tx_dat    ),
-.in5(  snd_udp_tx_start     ),
-.in6(   st   ),
-.in7(   udp_tx_busy    ) ,
-.in8(      ) ,
-.in9(      ) ,
-.in10(      ) ,
-.in11(        )  ,
-.in12(     ) ,
-.in13(     ),
-.in14(    )  
-);
-
-*/
+  
 
  
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

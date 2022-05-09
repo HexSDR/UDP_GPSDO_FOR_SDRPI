@@ -1,29 +1,5 @@
 
-/*
-
- trans_socket  trans_socket #( 
-    .AW(12) , // NOT LESS THAN 10
-    .DW(8)  // 16 FOR SIMULATION ,8 FOR REAL USE 
-	)(
-	.clk( ) ,
-	.rst( ) ,	//cfg if 
-	.cfg_udp_port( ) ,	//axi stream to ether if 
-	.s_din( ) ,
-	.s_valid( ) ,
-	.s_last( ) ,
-	.s_pkt_end( ) ,
-	.s_ready( ) ,
-	//ether udp if 
-    .m_udp_tx_busy( )  ,
-	.m_udp_pack_valid( )  ,
-    .m_udp_tx_len( )  ,
-    .m_udp_tx_dat( )  ,
-    .m_udp_tx_start( )    , 
-    .m_udp_tx_end( )    ,
-	.m_udp_port( )   
-	);
-	
-	*/
+// liwei 715713994@qq.com  
 
 
 module trans_socket #( 
@@ -133,58 +109,11 @@ always@(posedge clk) rd_fifo <= st == 20 ;
 
 assign fifo_full  =  full  ;	
 
-
-
-
-
-/*
-		 XIL_ILA_64x16 XIL_ILA_64x16_i(
-        .clk_0(clk),
-        .probe0_0(rst ),
-        .probe1_0( st ),
-        .probe2_0( AW ),
-        .probe3_0(fifo_dat  ),
-        .probe4_0(  fifo_wr ),
-        .probe5_0( fifo_full  ),
-        .probe6_0( m_udp_pack_ready  ),
-        .probe7_0( m_udp_pack_valid  ),
-        .probe8_0( m_udp_tx_len ),
-        .probe9_0( m_udp_tx_dat ),
-        .probe10_0( m_udp_tx_start ),
-        .probe11_0( m_udp_tx_end ),
-        .probe12_0( wait_cntr  ),
-        .probe13_0( fifo_cntr ),
-        .probe14_0(  ),
-        .probe15_0(  ) 
-		);
-*/
+ 
 
 endmodule
 
-	
-/*
-module sc_fifo#(
-.AW(4),
-.DW(32)
-)(
-
-.clk(),
-.rst(),
-
-.din(),
-.wr(),
-.full(),
-
-.dout(),
-.rd(),
-.empty(),
-
-
-.fwft_dout(),
-.fifo_cntr() 
-
-);
-*/
+ 
 
 module sc_fifo_4_socket#(
         parameter AW = 5 ,

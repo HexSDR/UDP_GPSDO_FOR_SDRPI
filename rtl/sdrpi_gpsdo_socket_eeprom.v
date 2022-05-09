@@ -1,5 +1,7 @@
  
 
+// liwei 715713994@qq.com  
+
 module sdrpi_gpsdo_ether_socket_eeprom (
 
 input clk_125m, rst,// clk_40m,
@@ -86,33 +88,7 @@ assign a_snd_dst_ip = a_rcv_src_ip ;
 
 wire [31:0] b_rcv_src_ip,b_snd_dst_ip ; 
 assign b_snd_dst_ip = b_rcv_src_ip ;
-
-  /*
-      
-  ila_64x16 ila_64x16 (
-.clk( clk_125m_eth ),
-
-.in0(  my_rcv_port_a    ),
-.in1(  socket0_net2pl_wr    ),
-.in2( socket0_net2pl_d    ),
-.in3( a_rcv_src_ip     ),
-
-.in4(  my_rcv_port_b    ),
-.in5(  socket1_net2pl_wr    ),
-.in6( socket1_net2pl_d    ),
-.in7( b_rcv_src_ip     ),
-
-.in8(    ) ,
-.in9(    ) ,
-.in10(     ) ,
-.in11(       )  ,
-.in12(    ) ,
-.in13(    ),
-.in14(    )  
-);
-
-*/
-
+ 
 
 
 

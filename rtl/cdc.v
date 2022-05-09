@@ -1,3 +1,6 @@
+
+// liwei 715713994@qq.com  
+
 module CDC_REGS  # (parameter aw =4,parameter dw =8 )(
         input wr_clk,wr_en ,
         input [dw-1:0] wr_dat,

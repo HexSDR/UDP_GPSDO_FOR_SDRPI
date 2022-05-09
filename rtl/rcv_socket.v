@@ -1,59 +1,6 @@
-/*
+ 
 
-     udp_top  a(
-                 .clk(clk),
-                 .rst(rst) ,
-
-                 .s_udp_dst_ip(my_b_ip),
-                 .s_udp_src_port(my_a_udp_port),
-                 .s_udp_dst_port (my_b_udp_port),
-                 .s_udp_tx_busy(s_udp_tx_busy),
-                 .s_udp_tx_len(test_len),
-                 .s_udp_tx_dat(r[7:0]),
-                 .s_udp_ip_id('hfeed),
-                 .s_udp_tx_start(s_udp_tx_start ),
-
-                 .phy_tx_dout( tx_dout_int ) ,
-                 .phy_tx_err(),
-                 .phy_tx_en( tx_en_int  ),
-                 .phy_rx_din(rx_din_int2 ),
-                 .phy_rx_dv(rx_dv_int2 ),
-
-                 .m_udp_len( m_udp_len )  ,
-                 .m_udp_dout(  udp_dout)  ,
-                 .m_udp_valid(udp_valid ) ,
-                 .m_udp_sof( udp_sof  ) ,
-                 .m_udp_eof( udp_eof ) ,
-                 .m_udp_chksum_ok( udp_chksum_ok ) ,
-
-                 .cfg_my_ip(my_a_ip) ,
-                 .cfg_my_mac(my_a_mac)
-
-             );
-			 
-			 */
-/*
-
-rcv_socket rcv_socket  (
-.clk( )  , 
-.rst( )  ,
-.my_port( ) ,
-.s_udp_dst_port( ) ,
-.my_ip( ) ,
-.s_udp_dst_ip( ) ,
-.from_port( ) ,
-.s_udp_src_port( ) ,
-.from_ip( ) ,
-.s_udp_src_ip( ) ,
-.s_udp_dout( ) ,
-.s_udp_sof( ) ,
-.m_udp_eof( ) ,
-.s_udp_valid( ) ,
-.fifo_wr( ) ,
-.fifo_dout( ) 
-);
-
-*/
+// liwei 715713994@qq.com  
 
 			 
 module rcv_socket (
