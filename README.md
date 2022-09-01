@@ -1,7 +1,6 @@
 # UDP_GPSDO_FOR_SDRPI
 Supprting files for UDP/IP stack and GPSDO in SDRPi board.
 
-  
 I provide a DCP file and some verilog file and .XDC file .
 This DCP file 
 
@@ -16,11 +15,8 @@ This DCP file
 * Check if a valid SDRPi borad, if not this function listed above will disable about 1 hours running .
 
 
-These rtl file illstrate the port and function for using DCP file,expescaly it provide a socket like UDP interface more easy for using .
+These rtl file illustrate the ports and functions for using DCP file,especially it provide a socket like UDP interface more easy for using .
 
 This XDC file it the constain file for pins defination.
 
-This demo_prj.tcl used to generate project.in vivado console,locat at (by type cd command)file of gen_prj.tcl,then type source  demo_prj.tcl .this vivado project will create automaticly reated.
-
-
-
+This demo_prj.tcl used to generate project.in vivado console,locat at (by type cd command)file of gen_prj.tcl,then type source  demo_prj.tcl .this vivado project will create automaticly .
